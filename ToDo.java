@@ -16,17 +16,14 @@ public static void main(String[] args) {
         System.out.println();
         System.out.println("1 to add to list.");
         System.out.println("2 to print list.");
-        System.out.println("3 to mark");
+        System.out.println("3 to delete");
         System.out.println("4 to exit");
         choice = input.nextInt();
         int count = 0;
 
         if (choice == 1) {
-                for(int i = 0; i < 2; ++i){
-                    input.nextLine();
-                    listTodo.add(input.nextLine());
-                    break;
-            }
+            input.nextLine();
+            listTodo.add(input.nextLine());
         }
         if (choice == 2) {
             for (int index = 0;index < listTodo.size(); index++) {
