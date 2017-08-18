@@ -11,13 +11,14 @@ public static void main(String[] args) {
     String[] list = new String[MAX];
     int choice = 0;
 
-    while (choice != 4) {
+    while (choice != 5) {
 
         System.out.println();
         System.out.println("1 to add to list.");
         System.out.println("2 to print list.");
         System.out.println("3 to delete");
-        System.out.println("4 to exit");
+        System.out.println("4 to mark");
+        System.out.println("5 to exit");
         choice = input.nextInt();
         int count = 0;
 
@@ -42,6 +43,17 @@ public static void main(String[] args) {
                     }
                 }
             }
+        if (choice == 4) {
+            for (int index = 0;index < listTodo.size(); index++) {
+            String value = listTodo.get(index);
+            if (index == (listTodo.size()-1)) {
+                Scanner inputNumber = new Scanner(System.in);
+                int num = inputNumber.nextInt();
+                listTodo.remove(num);
+                listTodo.add(value + " [X]");
+            }
+            }
         }
     }
+}
 }
